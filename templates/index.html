@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Docker Flask App</title>
+</head>
+<body>
+    <h1>👋 Welcome to My Dockerized Flask App!</h1>
+
+    {% if name %}
+        <p>Hello, <strong>{{ name }}</strong>! Glad to see you here.</p>
+    {% else %}
+        <form method="POST">
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit">Submit</button>
+        </form>
+    {% endif %}
+
+    <p><a href="/health">Health Check</a></p>
+    <p><a href="/info">System Info</a></p>
+    <p><a href="/time">Server Time</a></p>
+</body>
+</html>
